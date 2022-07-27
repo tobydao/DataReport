@@ -9,13 +9,14 @@ import { JSONService } from '../shared/json.service';
 
 export class TableComponent implements OnInit{
   data = [];
-  columns=[];
+  columns;
 
   constructor(private jsonService: JSONService) {}
 
   ngOnInit(){
     this.jsonService.getJSON().subscribe(json => {
-      json.map(obj => this.data.push(obj))
+      json.map(obj => this.data.push(obj));
+      this.columns =Object.keys(this.data[0]);
     });
   }
 

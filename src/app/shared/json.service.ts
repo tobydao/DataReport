@@ -6,9 +6,9 @@ import { Observable, map } from 'rxjs';
 export class JSONService {
 
   constructor(private http: HttpClient) {
-    this.getJSON().subscribe(data => {
-        console.log(data);
-    });
+    // this.getJSON().subscribe(data => {
+    //     console.log(data);
+    // });
   } 
 
   public getJSON(): Observable<any> {
