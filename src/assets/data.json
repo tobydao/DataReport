@@ -1,0 +1,308 @@
+[
+  {
+    "Database": "SSG",
+    "ObjectName": "_Kunde_MainSSG_SQL2016",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "SSG",
+    "ObjectName": "_SSG",
+    "Company A": "=",
+    "Company B": "=",
+    "Company C": "=",
+    "Company D": "=",
+    "Company E": "="
+  },
+  {
+    "Database": "SSG",
+    "ObjectName": "accSecurityDatabase",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "SSG",
+    "ObjectName": "actesy",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "SSG",
+    "ObjectName": "adm_AppPoolNeedsRecycle",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "="
+  },
+  {
+    "Database": "SSG",
+    "ObjectName": "adm_AppPoolRecycleDone",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "="
+  },
+  {
+    "Database": "SSG",
+    "ObjectName": "adm_getActiveUsers",
+    "Company A": "<",
+    "Company B": "=",
+    "Company C": "<",
+    "Company D": "=",
+    "Company E": "="
+  },
+  {
+    "Database": "SSG",
+    "ObjectName": "adm_Log",
+    "Company A": "=",
+    "Company B": "=",
+    "Company C": "=",
+    "Company D": "=",
+    "Company E": "="
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "adm_Log_Delete",
+    "Company A": "=",
+    "Company B": "=",
+    "Company C": "=",
+    "Company D": "=",
+    "Company E": "="
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "adm_Log_ErrorCount",
+    "Company A": "=",
+    "Company B": "=",
+    "Company C": "=",
+    "Company D": "=",
+    "Company E": "="
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "adm_Log_Read",
+    "Company A": "=",
+    "Company B": "=",
+    "Company C": "=",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "adm_Log_Trans",
+    "Company A": "=",
+    "Company B": "=",
+    "Company C": "=",
+    "Company D": "=",
+    "Company E": "="
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "adm_Log_UserInfo",
+    "Company A": "=",
+    "Company B": "=",
+    "Company C": "=",
+    "Company D": "=",
+    "Company E": "="
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "adm_Security_Grant",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "adm_Security_Revoke",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "adm_SessionMasterClone",
+    "Company A": "=",
+    "Company B": "=",
+    "Company C": "=",
+    "Company D": "=",
+    "Company E": "="
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "adm_TransactionLogVIEW",
+    "Company A": "=",
+    "Company B": "=",
+    "Company C": "=",
+    "Company D": "=",
+    "Company E": "="
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "admActivityLog",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "=",
+    "Company E": "="
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "admActivityLog_Archive",
+    "Company A": ">",
+    "Company B": ">",
+    "Company C": ">",
+    "Company D": ">",
+    "Company E": ">"
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "admActivityLog_SSG_CleanUp",
+    "Company A": ">",
+    "Company B": ">",
+    "Company C": ">",
+    "Company D": ">",
+    "Company E": ">"
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "admJobDetailLog",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "admJobLog",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "admSSGSetup",
+    "Company A": "=",
+    "Company B": "=",
+    "Company C": "=",
+    "Company D": "=",
+    "Company E": "="
+  },
+  {
+    "Database": "ADM",
+    "ObjectName": "ana_GenericQuery_Parameters_CLIENT",
+    "Company A": "=",
+    "Company B": "=",
+    "Company C": "=",
+    "Company D": "=",
+    "Company E": "="
+  },
+  {
+    "Database": "DataC6",
+    "ObjectName": "aux",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "DataC6",
+    "ObjectName": "bak",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "DataC6",
+    "ObjectName": "bat_Add_BatchGroups",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "DataC6",
+    "ObjectName": "bat_batQueue_Add",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "DataC6",
+    "ObjectName": "bat_batQueue_Sort",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "DataC6",
+    "ObjectName": "bat_Calculate_ALL_IFRS_component_byVersion",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "DataC6",
+    "ObjectName": "bat_Calculate_All_RE_component",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "DataC6",
+    "ObjectName": "bat_Calculate_RE_hierarchy",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "DataC6",
+    "ObjectName": "bat_Call_RE_hierarchy",
+    "Company A": "<",
+    "Company B": "<",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  },
+  {
+    "Database": "DataC6",
+    "ObjectName": "bat_Call_Split_Parallel",
+    "Company A": ">",
+    "Company B": ">",
+    "Company C": "<",
+    "Company D": "<",
+    "Company E": "<"
+  }
+]
