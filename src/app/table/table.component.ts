@@ -1,4 +1,6 @@
+import { OverlayKeyboardDispatcher } from '@angular/cdk/overlay';
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import { JSONService } from '../shared/json.service';
 
 @Component({
@@ -9,19 +11,19 @@ import { JSONService } from '../shared/json.service';
 
 export class TableComponent implements OnInit{
   data = [];
-  columns;
+  displayedColumns = [];
+  columnsToDisplay = [];
+  dataSource = new MatTableDataSource<Object>();
 
-  constructor(private jsonService: JSONService) {}
+  constructor(private jsonService: JSONService) {
+    this.jsonService.getJSON().subscribe(json => {
+      this.data = json;
+      this.displayedColumns = Object.keys(this.data[0])
+      this.columnsToDisplay =this.displayedColumns.slice();
+      this.dataSource.data = this.data;
+    })
+  }
 
   ngOnInit(){
-    this.jsonService.getJSON().subscribe(json => {
-      json.map(obj => this.data.push(obj));
-      this.columns =Object.keys(this.data[0]);
-    });
   }
-
-  getColumnRows() {
-    return this.data[0].keys();
-  }
-
 }
