@@ -1,4 +1,3 @@
-import { OverlayKeyboardDispatcher } from '@angular/cdk/overlay';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { JSONService } from '../shared/json.service';
@@ -25,5 +24,11 @@ export class TableComponent implements OnInit{
   }
 
   ngOnInit(){
+  }
+  
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    console.log(this.dataSource.filter);
   }
 }
