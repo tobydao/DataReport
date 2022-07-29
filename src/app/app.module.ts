@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { HeaderComponent } from './header/header.component';
+import { PickerComponent } from './table/picker/picker.component';
 
 @NgModule({
   imports:
@@ -22,7 +23,8 @@ import { HeaderComponent } from './header/header.component';
   [
     AppComponent,
     TableComponent,
-    HeaderComponent
+    HeaderComponent,
+    PickerComponent
   ],
   bootstrap:
   [
