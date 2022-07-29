@@ -9,4 +9,7 @@ import { Component, Input } from '@angular/core';
 export class PickerComponent{
   @Input() companies = [];
 
+  showOptions(event){
+    console.log(event.value); //true or false
+   }
 }

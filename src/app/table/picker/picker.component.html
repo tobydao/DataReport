@@ -1,5 +1,5 @@
-<mat-radio-group>
-  <mat-radio-button class="radio-group" *ngFor="let company of companies" [value]="company">
-    {{ company }}
-  </mat-radio-button>
-</mat-radio-group>
+<div *ngFor="let company of companies">
+  <mat-checkbox #checkbox (change)='showOptions(checkbox)' value='company'>
+    {{company}}
+  </mat-checkbox>
+</div>

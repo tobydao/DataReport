@@ -4,7 +4,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatTableModule,
     MatInputModule,
     MatButtonModule,
-    MatRadioModule,
+    MatCheckboxModule,
     MatIconModule
   ]
 })
