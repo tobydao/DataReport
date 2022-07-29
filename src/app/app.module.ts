@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   imports:
@@ -15,12 +16,13 @@ import { TableComponent } from './table/table.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    MatModule
+    MatModule,
   ],
   declarations:
   [
     AppComponent,
-    TableComponent
+    TableComponent,
+    HeaderComponent
   ],
   bootstrap:
   [

@@ -18,7 +18,7 @@ export class TableComponent implements OnInit{
     this.jsonService.getJSON().subscribe(json => {
       this.data = json;
       this.displayedColumns = Object.keys(this.data[0])
-      this.columnsToDisplay =this.displayedColumns.slice();
+      this.columnsToDisplay = this.displayedColumns.slice();
       this.dataSource.data = this.data;
     })
   }
