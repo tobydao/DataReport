@@ -8,8 +8,15 @@ import { Component, Input } from '@angular/core';
 
 export class PickerComponent{
   @Input() companies = [];
+  @Input() companiesToDisplay = [];
 
-  showOptions(event){
-    console.log(event.value); //true or false
+  showOptions(comp){ 
+    if(this.companiesToDisplay.indexOf(comp)){
+      console.log(comp); //true or false
+    }
+    
+    let index = this.companiesToDisplay.indexOf(comp);
+    this.companiesToDisplay.splice(index, 1)
+    console.log(this.companiesToDisplay)
    }
 }

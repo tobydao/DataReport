@@ -1,7 +1,7 @@
 <button mat-raised-button (click)="addColumn()"> Add column </button>
 <button mat-raised-button (click)="removeColumn()"> Remove column </button>
 <button mat-raised-button mat-icon-button style="background: #c23030; color: white" (click)="resetTable()"> <mat-icon>restore</mat-icon> </button>
-<app-picker [companies] = "displayedColumns.slice(2)"></app-picker>
+<app-picker [companies] = "displayedColumns.slice(2)" [companiesToDisplay] = "columnsToDisplay.slice(2)"></app-picker>
 
 <mat-form-field appearance="standard">
   <mat-label>Filter</mat-label>
