@@ -2,9 +2,12 @@ table {
   width: 100%;
 }
 
+.mat-icon-button {
+  line-height: unset;
+}
+
 .mat-form-field {
   font-size: 14px;
-  width: 100%;
 }
 
 .mat-row:nth-child(even){

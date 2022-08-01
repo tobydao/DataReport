@@ -1,10 +1,18 @@
-<app-picker [companies] = "displayedColumns.slice(2)" [companiesToDisplay] = "columnsToDisplay.slice(2)" (companyEvent)="changeColumn($event)"></app-picker>
-<button mat-raised-button mat-icon-button style="background: #c23030; color: white" (click)="resetTable()"> <mat-icon>restore</mat-icon> </button>
+<mat-grid-list>
+  <button mat-button [matMenuTriggerFor]="menu">Select Companies</button>
+  <mat-menu #menu="matMenu">
+    <app-picker [companies] = "displayedColumns.slice(2)" [companiesToDisplay] = "columnsToDisplay.slice(2)" (companyEvent)="changeColumn($event)"></app-picker>
+  </mat-menu>
 
-<mat-form-field appearance="standard">
-  <mat-label>Filter</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="data" #input>
-</mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="data" #input>
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</mat-grid-list>
+
+<button mat-raised-button mat-icon-button style="background: #c23030; color: white" (click)="resetTable()"> <mat-icon >restore</mat-icon></button>
+
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">

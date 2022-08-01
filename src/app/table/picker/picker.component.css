@@ -1,6 +1,6 @@
-.checkbox {
+.mat-checkbox {
   display: flex;
-  flex-direction: column;
-  margin: 15px 0;
+  margin: 15 15px;
   align-items: flex-start;
 }
+
