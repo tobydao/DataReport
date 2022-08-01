@@ -1,5 +1,5 @@
 <div *ngFor="let company of companies">
-  <mat-checkbox [checked]="companiesToDisplay.includes(company)" (change)='showOptions(company)'>
+  <mat-checkbox [checked]="companiesToDisplay.includes(company)" (change)='onChange(company)'>
     {{company}}
   </mat-checkbox>
 </div>

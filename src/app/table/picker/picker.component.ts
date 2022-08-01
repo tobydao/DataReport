@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-picker',
@@ -9,14 +9,13 @@ import { Component, Input } from '@angular/core';
 export class PickerComponent{
   @Input() companies = [];
   @Input() companiesToDisplay = [];
+  @Output() companyEvent = new EventEmitter<string>();
 
-  showOptions(comp){ 
-    if(this.companiesToDisplay.indexOf(comp)){
-      console.log(comp); //true or false
-    }
-    
+  onChange(comp){
     let index = this.companiesToDisplay.indexOf(comp);
-    this.companiesToDisplay.splice(index, 1)
-    console.log(this.companiesToDisplay)
+    if(index > 0 ){
+      this.companiesToDisplay.splice(index, 1);
+      this.companyEvent.emit(comp);
+    }
    }
 }

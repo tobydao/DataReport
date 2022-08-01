@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { JSONService } from '../shared/json.service';
+import { PickerComponent } from './picker/picker.component';
 
 @Component({
   selector: 'app-table',
@@ -8,7 +9,7 @@ import { JSONService } from '../shared/json.service';
   styleUrls: [ './table.component.css' ]
 })
 
-export class TableComponent implements OnInit{
+export class TableComponent {
   dataToDisplay = []
   displayedColumns = [];
   columnsToDisplay = [];
@@ -23,25 +24,20 @@ export class TableComponent implements OnInit{
     })
   }
 
-  ngOnInit(){
-  }
-
-  //ngOnDestroy unsubscribe
-
-  //row operations
-
-
   //column operations
   addColumn() {
     const randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
     this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
   }
 
-  removeColumn() {
-    if (this.columnsToDisplay.length) {
-      this.columnsToDisplay.pop();
+  removeColumn(element) {
+    let index = this.columnsToDisplay.indexOf(element)
+    if (index > 0) {
+      this.columnsToDisplay.splice(index, 1);;
     }
+    console.log(element)
   }
+  
   resetTable() {
     if(this.displayedColumns.length){
       this.columnsToDisplay = this.displayedColumns.slice();
@@ -51,6 +47,5 @@ export class TableComponent implements OnInit{
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-    console.log(this.dataSource.filter);
   }
 }
