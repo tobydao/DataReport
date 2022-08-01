@@ -1,17 +1,26 @@
-<mat-grid-list>
-  <button mat-button [matMenuTriggerFor]="menu">Select Companies</button>
-  <mat-menu #menu="matMenu">
-    <app-picker [companies] = "displayedColumns.slice(2)" [companiesToDisplay] = "columnsToDisplay.slice(2)" (companyEvent)="changeColumn($event)"></app-picker>
-  </mat-menu>
+<mat-grid-list cols = "8" rowHeight="60px">
+  <mat-grid-tile colspan="1">
+    <button mat-button [matMenuTriggerFor]="menu">Hide</button>
+    <mat-menu #menu="matMenu">
+      <app-picker (click) = "$event.stopPropagation()" [companies] = "displayedColumns.slice(2)" [companiesToDisplay] = "columnsToDisplay.slice(2)" (companyEvent)="changeColumn($event)"></app-picker>
+    </mat-menu>
+  </mat-grid-tile>
+  
+  <mat-grid-tile colspan="4">
+  </mat-grid-tile>
 
-  <mat-form-field appearance="standard">
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="data" #input>
-    <mat-icon matSuffix>search</mat-icon>
-  </mat-form-field>
+  <mat-grid-tile colspan="2">
+    <mat-form-field appearance="standard">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="data" #input>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1">
+    <button mat-raised-button mat-icon-button style="background: #c23030; color: white" (click)="resetTable()"> <mat-icon >restore</mat-icon></button>
+  </mat-grid-tile>
 </mat-grid-list>
-
-<button mat-raised-button mat-icon-button style="background: #c23030; color: white" (click)="resetTable()"> <mat-icon >restore</mat-icon></button>
 
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
