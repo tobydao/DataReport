@@ -12,10 +12,6 @@ export class PickerComponent{
   @Output() companyEvent = new EventEmitter<string>();
 
   onChange(comp){
-    let index = this.companiesToDisplay.indexOf(comp);
-    if(index > 0 ){
-      this.companiesToDisplay.splice(index, 1);
       this.companyEvent.emit(comp);
-    }
    }
 }

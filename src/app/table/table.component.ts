@@ -1,7 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { JSONService } from '../shared/json.service';
-import { PickerComponent } from './picker/picker.component';
 
 @Component({
   selector: 'app-table',
@@ -25,17 +24,13 @@ export class TableComponent {
   }
 
   //column operations
-  addColumn() {
-    const randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
-    this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
-  }
-
-  removeColumn(element) {
+  changeColumn(element) {
     let index = this.columnsToDisplay.indexOf(element)
     if (index > 0) {
       this.columnsToDisplay.splice(index, 1);;
+    } else if(index < 0) {
+      this.columnsToDisplay.push(element);
     }
-    console.log(element)
   }
   
   resetTable() {
