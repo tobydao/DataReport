@@ -1,6 +1,8 @@
 <mat-grid-list cols = "8" rowHeight="60px">
   <mat-grid-tile colspan="1">
-    <button mat-button [matMenuTriggerFor]="menu">Hide</button>
+    <button mat-button style= "color:white; background: #3092b3"[matMenuTriggerFor]="menu">
+      Select<mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+    </button>
     <mat-menu #menu="matMenu">
       <app-picker (click) = "$event.stopPropagation()" [companies] = "displayedColumns.slice(2)" [companiesToDisplay] = "columnsToDisplay.slice(2)" (companyEvent)="changeColumn($event)"></app-picker>
     </mat-menu>
