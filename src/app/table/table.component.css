@@ -17,3 +17,18 @@ table {
 .mat-row:nth-child(odd){
   background-color: #dbdbdb;
 }
+
+.equal {
+  color: green;
+  font-weight: bold;
+}
+
+.greaterthan {
+  color: blueviolet;
+  font-weight: bold;
+}
+
+.smallerthan {
+  color: red;
+  font-weight: bold;
+}

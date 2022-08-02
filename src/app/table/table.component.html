@@ -1,6 +1,6 @@
 <mat-grid-list cols = "8" rowHeight="60px">
   <mat-grid-tile colspan="1">
-    <button mat-button style= "color:white; background: #3092b3"[matMenuTriggerFor]="menu">
+    <button mat-button style= "color:white; background: #007CB0"[matMenuTriggerFor]="menu">
       Select<mat-icon matSuffix>keyboard_arrow_down</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
@@ -28,7 +28,7 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
     <th mat-header-cell *matHeaderCellDef> {{column}} </th>
-    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+    <td mat-cell [ngClass] = "{'equal': element[column] === '=', 'greaterthan': element[column] === '>', 'smallerthan': element[column] === '<'}" *matCellDef="let element"> {{element[column]}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="columnsToDisplay, sticky:true"></tr>
