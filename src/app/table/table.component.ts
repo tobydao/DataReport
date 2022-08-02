@@ -9,7 +9,7 @@ import { JSONService } from '../shared/json.service';
 })
 
 export class TableComponent {
-  dataToDisplay = []
+  dataToDisplay = [];
   displayedColumns = [];
   columnsToDisplay = [];
   dataSource = new MatTableDataSource<Object>();
@@ -31,6 +31,7 @@ export class TableComponent {
     } else if(index < 0) {
       this.columnsToDisplay.push(element);
     }
+    this.addCounter()
   }
   
   resetTable() {
@@ -42,5 +43,32 @@ export class TableComponent {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  addCounter() {
+    let data = this.dataSource.data.slice();
+    let equalCount = 0;
+    let smallCount = 0;
+    let greatCount = 0;
+
+    for(let func of this.dataSource.data) {
+      for(const key in func){
+        if(func.hasOwnProperty(key)) {
+          let a = func[key];
+          switch(a) {
+            case '=':
+              equalCount++;
+              break;
+            case '>':
+              greatCount++;
+              break;
+            case '<':
+              smallCount++;
+              break;
+          }
+        }
+      }
+      equalCount = smallCount = greatCount = 0;
+    }
   }
 }
